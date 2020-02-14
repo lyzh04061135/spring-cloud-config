@@ -1,4 +1,4 @@
 demo:
   config:
     server:
-      name: config-server
+      name: config-serve

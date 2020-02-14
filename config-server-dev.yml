@@ -1,0 +1,30 @@
+
+#hystrix:
+#  shareSecurityContext: true
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutinMilliseconds: 180000
+
+#ribbon:
+#  eureka:
+#    enabled: true
+#  eager-load:
+#    enabled: true
+#    clients: config-app
+
+#feign:
+#  hystrix:
+#    enabled: true
+
+demo:
+  config:
+    server:
+      name: config-
+
+logging:
+  level:
+    com:
+      demo: debug

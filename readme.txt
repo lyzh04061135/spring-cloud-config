@@ -6,4 +6,4 @@
 
 1、去掉rabbitmq配置部分，去掉spring-cloud-starter-bus-amqp部分就是不通过配置中心，手动刷新模式
 2、该目录是远程配置部分，需要配合本地项目spring-config使用。
-3、git webhook地址 http://b612ed7b.ngrok.io	ngrok.exe http 9081
+3、git webhook地址 http://b612ed7b.ngrok.io/actuator/bus-refresh	ngrok.exe http 9081

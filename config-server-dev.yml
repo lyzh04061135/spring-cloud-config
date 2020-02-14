@@ -22,7 +22,7 @@
 demo:
   config:
     server:
-      name: config-
+      name: config-server
 
 logging:
   level:

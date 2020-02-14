@@ -1,23 +1,42 @@
+server:
+  port: 9081
+  serverId: config-server
 
-#hystrix:
-#  shareSecurityContext: true
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutinMilliseconds: 180000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
-#ribbon:
-#  eureka:
-#    enabled: true
-#  eager-load:
-#    enabled: true
-#    clients: config-app
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.3.7:9080/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    appname: config-server
+    prefer-ip-address: true
 
-#feign:
-#  hystrix:
-#    enabled: true
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lyzh04061135/spring-cloud-config.git
+          search-paths: config-server
+          username: lyzh04061135
+          password: l2013githubyzh
+          force-pull: true
+      label: master
+  profiles:
+    active: git
 
 demo:
   config:

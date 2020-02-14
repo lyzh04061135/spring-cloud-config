@@ -1,5 +1,4 @@
-
-logging:
-  level:
-    com:
-      demo: debug
+demo:
+  config:
+    server:
+      name: config-server

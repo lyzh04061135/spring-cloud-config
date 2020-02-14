@@ -21,7 +21,6 @@ eureka:
     appname: config-server
     prefer-ip-address: true
 
-
 spring:
   application:
     name: config-server
